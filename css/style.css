@@ -101,6 +101,11 @@ nav {
     align-items: center;    /* Add this */
 }
 
+a {
+    text-decoration: none;
+    color: white;
+}
+
 nav ul {                    /* Add this new rule */
     display: flex;
     justify-content: center;
@@ -346,4 +351,474 @@ padding: 100px;
 
 .conc {
     font-size: 16px;
+}
+
+.questions-header {
+    color: white;
+    padding: 30px;
+    text-transform: uppercase;
+}
+
+.quiz-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin: 2rem auto;
+    padding: 20px;
+}
+
+.quiz-header {
+    position: sticky;
+    top: 0;
+    background: white;
+    z-index: 100;
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+#question {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.option-btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background: #fff;
+    cursor: pointer;
+}
+
+.option-btn:hover {
+    background: #f0f0f0;
+}
+
+.hide {
+    display: none;
+}
+
+#result {
+    margin: 20px 0;
+    padding: 10px;
+    text-align: center;
+}
+
+.correct {
+    color: green;
+    background: #e8f5e9;
+}
+
+.incorrect {
+    color: red;
+    background: #ffebee;
+}
+
+#next, #restart {
+    padding: 10px 20px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#next:hover, #restart:hover {
+    background: #0056b3;
+}
+
+/* Parte das Questões */
+
+
+.question-card {
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 16px;
+    background-color: #ffffff;
+}
+
+.question-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+.question-title {
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+.question-body {
+    margin-bottom: 8px;
+}
+.question-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.question-footer {
+    display: flex;
+    gap: 8px;
+}
+
+.tags {
+    display: flex;
+    gap: 10px;  /* Adds space between tags */
+    justify-content: flex-start;
+    margin-left: 0;
+}
+
+
+.tag {
+    background-color: #edf2f7;
+    border-radius: 4px;
+    padding: 4px 8px;
+    font-size: 0.875rem;
+}
+.actions {
+    display: flex;
+    gap: 8px;
+}
+.actions button {
+    background-color: #3182ce;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 12px;
+    font-size: 0.875rem;
+    cursor: pointer;
+}
+.actions button:hover {
+    background-color: #2b6cb0;
+}
+.options {
+    margin-top: 8px;
+}
+.option {
+    display: flex;
+    align-items: center;
+    margin-bottom: 4px;
+}
+.option input[type="radio"] {
+    display: none;
+}
+.option label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.option label::before {
+    content: attr(data-letter);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background-color: #f7fafc;
+    color: #4a5568;
+    margin-right: 8px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+.option input[type="radio"]:checked + label::before {
+    background-color: #3182ce;
+    color: #ffffff;
+}
+.page-header {
+    background-color: #ffffff;
+    border-bottom: 1px solid #e2e8f0;
+    padding: 16px;
+    margin-bottom: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.page-header .filters {
+    display: flex;
+    gap: 16px;
+}
+.filter {
+    display: flex;
+    flex-direction: column;
+}
+.filter label {
+    font-weight: 500;
+    margin-bottom: 4px;
+}
+.filter select {
+    padding: 8px;
+    border: 1px solid #e2e8f0;
+    border-radius: 4px;
+}
+
+.select-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.select-container {
+    width: 100%;
+}
+
+.select-container input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #e2e8f0;
+    border-radius: 4px 4px 0 0;
+    font-size: 14px;
+    margin-bottom: -1px;
+}
+
+.select-container input:focus {
+    outline: none;
+    border-color: #3b82f6;
+    position: relative;
+    z-index: 1;
+}
+
+.select-container select {
+    width: 100%;
+    padding: 4px;
+    border: 1px solid #e2e8f0;
+    border-radius: 0 0 4px 4px;
+    background-color: white;
+    font-size: 14px;
+}
+
+.select-container select:focus {
+    outline: none;
+    border-color: #3b82f6;
+}
+
+.select-container select option {
+    padding: 8px;
+}
+
+.select-container select option:hover {
+    background-color: #f1f5f9;
+}
+
+/* Hide options that don't match search */
+.select-container select option.hidden {
+    display: none;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 2rem;
+    padding: 1rem;
+}
+
+.pagination button {
+    padding: 0.5rem 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.pagination button:disabled {
+    background-color: #f0f0f0;
+    cursor: not-allowed;
+}
+
+.pagination span {
+    font-size: 0.9rem;
+}
+
+.questions-area {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.question-number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #e9e9e9;
+    color: #333;
+    width: 30px;
+    height: 30px;
+    border-radius: 6px;
+    font-weight: 500;
+    font-size: 24px;
+}
+
+.question-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.question-metadata {
+    display: flex;
+    gap: 10px;
+    color: #666;
+    font-size: 14px;
+    border: 1px solid #808080;
+    border-radius: 2px;
+    padding: 2px;
+}
+
+/* Base responsive styles */
+@media screen and (max-width: 768px) {
+    /* Container adjustments */
+    .quiz-container {
+        padding: 10px;
+        margin: 0;
+    }
+
+    /* Header adjustments */
+    .quiz-header {
+        padding: 10px;
+    }
+
+    /* Question card adjustments */
+    .question-card {
+        padding: 15px;
+        margin: 10px 0;
+    }
+
+    /* Question header layout */
+    .question-header {
+        flex-direction: column;
+        gap: 10px;
+        align-items: flex-start;
+    }
+
+    .question-metadata {
+        font-size: 12px;
+        flex-wrap: wrap;
+    }
+
+    /* Options adjustments */
+    .option {
+        padding: 8px;
+    }
+
+    .option label {
+        font-size: 14px;
+        line-height: 1.4;
+    }
+
+    .option label::before {
+        width: 28px;
+        height: 28px;
+        font-size: 14px;
+    }
+
+    /* Buttons adjustments */
+    .actions {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+    }
+
+    .actions button {
+        width: 100%;
+        padding: 12px;
+        font-size: 16px;
+    }
+
+    /* Tags adjustments */
+    .tags {
+        flex-wrap: wrap;
+        gap: 5px;
+    }
+
+    .tag {
+        font-size: 12px;
+        padding: 3px 6px;
+    }
+
+    /* Filter adjustments */
+    .filters {
+        flex-direction: column;
+        gap: 10px;
+        margin-bottom: 15px;
+    }
+
+    .select-container {
+        width: 100%;
+    }
+
+    .select-container select,
+    .select-container input {
+        width: 100%;
+        padding: 10px;
+        font-size: 16px; /* Better for touch targets */
+    }
+
+    /* Progress bar adjustments */
+    .progress-container {
+        margin: 10px 0;
+    }
+
+    /* Question number adjustment */
+    .question-number {
+        width: 25px;
+        height: 25px;
+        font-size: 12px;
+    }
+}
+
+/* Additional adjustments for very small screens */
+@media screen and (max-width: 320px) {
+    .question-card {
+        padding: 10px;
+    }
+
+    .option label {
+        font-size: 13px;
+    }
+
+    .actions button {
+        padding: 10px;
+        font-size: 14px;
+    }
+}
+
+/* Fix for iOS Safari input styles */
+@supports (-webkit-touch-callout: none) {
+    .select-container select,
+    .select-container input,
+    .actions button {
+        appearance: none;
+        border-radius: 5px;
+    }
+}
+
+/* Improve touch targets */
+@media (hover: none) and (pointer: coarse) {
+    .option label,
+    .actions button,
+    .select-container select {
+        min-height: 44px; /* Apple's recommended minimum touch target size */
+    }
+}
+
+/* Fix for landscape mode */
+@media screen and (max-width: 768px) and (orientation: landscape) {
+    .quiz-container {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .filters {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .select-container {
+        width: calc(50% - 5px);
+    }
 }

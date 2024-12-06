@@ -1,0 +1,495 @@
+{
+    "pageInfo": {
+      "id": "67890",
+      "filters": {
+        "categories": [
+          {
+            "value": "constitutional-law",
+            "label": "Direito Constitucional"
+          },
+          {
+            "value": "logical-mathematical-reasoning",
+            "label": "RLM"
+          }
+        ],
+        "difficulties": [
+          {
+            "value": "easy",
+            "label": "Fácil"
+          },
+          {
+            "value": "medium",
+            "label": "Médio"
+          },
+          {
+            "value": "hard",
+            "label": "Difícil"
+          }
+        ],
+        "types": [
+          {
+            "value": "multiple-choice",
+            "label": "Escolha Múltipla"
+          }
+        ]
+      }
+    },
+    "questions": [
+      {
+        "id": 1,
+        "title": "Question 1",
+        "category": "constitutional-law",
+        "content": "Qual é a principal função da Constituição em um Estado Democrático de Direito?",
+        "type": "multiple-choice",
+        "year": "2023",
+        "board": "CRS",
+        "organization": "PMMG",
+        "options": [
+          {
+            "id": "q1a",
+            "value": "A",
+            "text": "Estabelecer normas de conduta para o mercado financeiro."
+          },
+          {
+            "id": "q1b",
+            "value": "B",
+            "text": "Garantir os direitos fundamentais e organizar os poderes do Estado."
+          },
+          {
+            "id": "q1c",
+            "value": "C",
+            "text": "Fixar regras de convivência social apenas."
+          },
+          {
+            "id": "q1d",
+            "value": "D",
+            "text": "Organizar a economia de mercado."
+          }
+        ],
+        "correctAnswer": "B",
+        "tags": ["Funções da Constituição", "Estado Democrático"],
+        "metadata": {
+          "likes": 0,
+          "comments": []
+        }
+      },
+      {
+        "id": 2,
+        "title": "Question 2",
+        "category": "constitutional-law",
+        "content": "O que significa o princípio da separação dos poderes?",
+        "type": "multiple-choice",
+        "year": "2023",
+        "board": "CRS",
+        "organization": "PMMG",
+        "options": [
+          {
+            "id": "q2a",
+            "value": "A",
+            "text": "Divisão do governo em União, Estados e Municípios."
+          },
+          {
+            "id": "q2b",
+            "value": "B",
+            "text": "Garantia da harmonia e independência entre Executivo, Legislativo e Judiciário."
+          },
+          {
+            "id": "q2c",
+            "value": "C",
+            "text": "Estabelecimento de hierarquias dentro dos órgãos públicos."
+          },
+          {
+            "id": "q2d",
+            "value": "D",
+            "text": "Concessão de autonomia administrativa a todas as autarquias."
+          }
+        ],
+        "correctAnswer": "B",
+        "tags": ["Princípios Constitucionais", "Separação de Poderes"],
+        "metadata": {
+          "likes": 0,
+          "comments": []
+        }
+      },
+      {
+        "id": 3,
+        "title": "Question 3",
+        "category": "constitutional-law",
+        "content": "O que é cláusula pétrea na Constituição Federal brasileira?",
+        "type": "multiple-choice",
+        "year": "2023",
+        "board": "CRS",
+        "organization": "PMMG",
+        "options": [
+          {
+            "id": "q3a",
+            "value": "A",
+            "text": "Norma constitucional que pode ser alterada por emenda constitucional."
+          },
+          {
+            "id": "q3b",
+            "value": "B",
+            "text": "Princípio que pode ser revogado por decisão do Congresso Nacional."
+          },
+          {
+            "id": "q3c",
+            "value": "C",
+            "text": "Dispositivo constitucional que não pode ser abolido nem modificado."
+          },
+          {
+            "id": "q3d",
+            "value": "D",
+            "text": "Regra transitória que assegura direitos adquiridos."
+          }
+        ],
+        "correctAnswer": "C",
+        "tags": ["Cláusulas Pétreas", "Imutabilidade Constitucional"],
+        "metadata": {
+          "likes": 0,
+          "comments": []
+        }
+      },
+      {
+        "id": 4,
+        "title": "Question 4",
+        "category": "constitutional-law",
+        "content": "A quem compete propor emenda constitucional?",
+        "type": "multiple-choice",
+        "year": "2023",
+        "board": "CRS",
+        "organization": "PMMG",
+        "options": [
+          {
+            "id": "q4a",
+            "value": "A",
+            "text": "Somente ao Presidente da República."
+          },
+          {
+            "id": "q4b",
+            "value": "B",
+            "text": "Somente aos membros do Senado Federal."
+          },
+          {
+            "id": "q4c",
+            "value": "C",
+            "text": "A um terço dos membros de qualquer casa do Congresso Nacional, ao Presidente da República ou a mais da metade das Assembleias Legislativas estaduais."
+          },
+          {
+            "id": "q4d",
+            "value": "D",
+            "text": "A qualquer cidadão por meio de iniciativa popular."
+          }
+        ],
+        "correctAnswer": "C",
+        "tags": ["Processo Legislativo", "Emenda Constitucional"],
+        "metadata": {
+          "likes": 0,
+          "comments": []
+        }
+      },
+      {
+        "id": 5,
+        "title": "Question 5",
+        "category": "constitutional-law",
+        "content": "Quais direitos são considerados fundamentais segundo a Constituição Federal de 1988?",
+        "type": "multiple-choice",
+        "year": "2023",
+        "board": "CRS",
+        "organization": "PMMG",
+        "options": [
+          {
+            "id": "q5a",
+            "value": "A",
+            "text": "Direitos Civis, Políticos, Sociais, Econômicos e Culturais."
+          },
+          {
+            "id": "q5b",
+            "value": "B",
+            "text": "Apenas Direitos Civis e Políticos."
+          },
+          {
+            "id": "q5c",
+            "value": "C",
+            "text": "Somente Direitos Econômicos e Sociais."
+          },
+          {
+            "id": "q5d",
+            "value": "D",
+            "text": "Apenas os Direitos Trabalhistas."
+          }
+        ],
+        "correctAnswer": "A",
+        "tags": ["Direitos Fundamentais", "CF/88"],
+        "metadata": {
+          "likes": 0,
+          "comments": []
+        }
+      },
+      {
+        "id": 6,
+        "title": "Question 6",
+        "category": "constitutional-law",
+        "content": "Qual é o objetivo fundamental da República Federativa do Brasil previsto no Art. 3º da CF/88?",
+        "type": "multiple-choice",
+        "year": "2023",
+        "board": "CRS",
+        "organization": "PMMG",
+        "options": [
+          {
+            "id": "q6a",
+            "value": "A",
+            "text": "Garantir a ordem econômica."
+          },
+          {
+            "id": "q6b",
+            "value": "B",
+            "text": "Erradicar a pobreza e a marginalização e reduzir as desigualdades sociais e regionais."
+          },
+          {
+            "id": "q6c",
+            "value": "C",
+            "text": "Assegurar o monopólio das riquezas minerais."
+          },
+          {
+            "id": "q6d",
+            "value": "D",
+            "text": "Fortalecer o comércio exterior."
+          }
+        ],
+        "correctAnswer": "B",
+        "tags": ["Objetivos Fundamentais", "CF/88"],
+        "metadata": {
+          "likes": 0,
+          "comments": []
+        }
+      },
+      {
+        "id": 7,
+        "title": "Question 7",
+        "category": "logical-mathematical-reasoning",
+        "content": "Se uma pessoa compra 3 maçãs por R$ 4,50, qual será o custo de 7 maçãs, considerando o mesmo preço unitário?",
+        "type": "multiple-choice",
+        "year": "2023",
+        "board": "CRS",
+        "organization": "PMMG",
+        "options": [
+          {
+            "id": "q7a",
+            "value": "A",
+            "text": "R$ 10,50"
+          },
+          {
+            "id": "q7b",
+            "value": "B",
+            "text": "R$ 12,00"
+          },
+          {
+            "id": "q7c",
+            "value": "C",
+            "text": "R$ 9,00"
+          },
+          {
+            "id": "q7d",
+            "value": "D",
+            "text": "R$ 14,00"
+          }
+        ],
+        "correctAnswer": "A",
+        "tags": ["Proporção", "Regra de Três"],
+        "metadata": {
+          "likes": 0,
+          "comments": []
+        }
+      },
+      {
+        "id": 8,
+        "title": "Question 8",
+        "category": "logical-mathematical-reasoning",
+        "content": "Qual é o próximo número na sequência: 2, 6, 12, 20, 30?",
+        "type": "multiple-choice",
+        "year": "2023",
+        "board": "CRS",
+        "organization": "PMMG",
+        "options": [
+          {
+            "id": "q8a",
+            "value": "A",
+            "text": "40"
+          },
+          {
+            "id": "q8b",
+            "value": "B",
+            "text": "42"
+          },
+          {
+            "id": "q8c",
+            "value": "C",
+            "text": "56"
+          },
+          {
+            "id": "q8d",
+            "value": "D",
+            "text": "36"
+          }
+        ],
+        "correctAnswer": "B",
+        "tags": ["Sequência Numérica", "Lógica Matemática"],
+        "metadata": {
+          "likes": 0,
+          "comments": []
+        }
+      },
+      {
+        "id": 9,
+        "title": "Question 9",
+        "category": "logical-mathematical-reasoning",
+        "content": "Um grupo de amigos decidiu dividir igualmente um prêmio de R$ 3.600,00 entre eles. Se cada um recebeu R$ 600,00, quantos amigos estavam no grupo?",
+        "type": "multiple-choice",
+        "year": "2023",
+        "board": "CRS",
+        "organization": "PMMG",
+        "options": [
+          {
+            "id": "q9a",
+            "value": "A",
+            "text": "5"
+          },
+          {
+            "id": "q9b",
+            "value": "B",
+            "text": "6"
+          },
+          {
+            "id": "q9c",
+            "value": "C",
+            "text": "7"
+          },
+          {
+            "id": "q9d",
+            "value": "D",
+            "text": "8"
+          }
+        ],
+        "correctAnswer": "B",
+        "tags": ["Divisão", "Matemática Básica"],
+        "metadata": {
+          "likes": 0,
+          "comments": []
+        }
+      },
+      {
+        "id": 10,
+        "title": "Question 10",
+        "category": "logical-mathematical-reasoning",
+        "content": "Se um relógio adianta 5 minutos a cada hora, quanto tempo ele terá adiantado após 24 horas?",
+        "type": "multiple-choice",
+        "year": "2023",
+        "board": "CRS",
+        "organization": "PMMG",
+        "options": [
+          {
+            "id": "q10a",
+            "value": "A",
+            "text": "2 horas"
+          },
+          {
+            "id": "q10b",
+            "value": "B",
+            "text": "1 hora e 20 minutos"
+          },
+          {
+            "id": "q10c",
+            "value": "C",
+            "text": "3 horas"
+          },
+          {
+            "id": "q10d",
+            "value": "D",
+            "text": "2 horas e 20 minutos"
+          }
+        ],
+        "correctAnswer": "A",
+        "tags": ["Problemas de Tempo", "Raciocínio Lógico"],
+        "metadata": {
+          "likes": 0,
+          "comments": []
+        }
+      },
+      {
+        "id": 11,
+        "title": "Question 11",
+        "year": "2023",
+        "board": "CRS",
+        "organization": "PMMG",
+        "category": "logical-mathematical-reasoning",
+        "content": "Se A > B, B > C, e C = 10, qual é a relação verdadeira?",
+        "type": "multiple-choice",
+        "options": [
+          {
+            "id": "q11a",
+            "value": "A",
+            "text": "A < 10"
+          },
+          {
+            "id": "q11b",
+            "value": "B",
+            "text": "A > 10"
+          },
+          {
+            "id": "q11c",
+            "value": "C",
+            "text": "A = 10"
+          },
+          {
+            "id": "q11d",
+            "value": "D",
+            "text": "A = B = C"
+          }
+        ],
+        "correctAnswer": "B",
+        "tags": ["Relações Numéricas", "Desigualdade"],
+        "metadata": {
+          "likes": 0,
+          "comments": []
+        }
+      },
+      {
+        "id": 12,
+        "title": "Question 12",
+        "category": "logical-mathematical-reasoning",
+        "content": "Em uma sala com 35 pessoas, 20 gostam de futebol e 15 gostam de basquete. Sabendo que 5 pessoas gostam de ambos, quantas pessoas não gostam de nenhum desses esportes?",
+        "type": "multiple-choice",
+        "year": "2023",
+        "board": "CRS",
+        "organization": "PMMG",
+        "options": [
+          {
+            "id": "q12a",
+            "value": "A",
+            "text": "5"
+          },
+          {
+            "id": "q12b",
+            "value": "B",
+            "text": "10"
+          },
+          {
+            "id": "q12c",
+            "value": "C",
+            "text": "15"
+          },
+          {
+            "id": "q12d",
+            "value": "D",
+            "text": "20"
+          }
+        ],
+        "correctAnswer": "B",
+        "tags": ["Conjuntos", "Interseção"],
+        "metadata": {
+          "likes": 0,
+          "comments": []
+        }
+      }
+    ]
+}

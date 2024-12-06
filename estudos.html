@@ -1,0 +1,290 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>
+        Dashboard
+    </title>
+    <script src="https://cdn.tailwindcss.com">
+    </script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+</head>
+
+<body class="bg-gray-100 font-sans antialiased">
+    <div class="flex h-screen">
+        <!-- Sidebar -->
+        <div class="bg-gray-900 text-white w-64 space-y-6 py-7 px-2 h-full fixed">
+            <div class="flex items-center space-x-2 px-4">
+                <i class="fas fa-undo-alt text-2xl">
+                </i>
+                <span class="text-2xl font-extrabold">
+                    Visão geral
+                </span>
+            </div>
+            <nav class="space-y-1">
+                <a class="block py-2.5 px-4 rounded transition duration-200 hover:bg-gray-700" href="#">
+                    <i class="fas fa-calendar-alt mr-3">
+                    </i>
+                    Planejamento
+                </a>
+                <div>
+                    <a class="block py-2.5 px-4 rounded transition duration-200 hover:bg-gray-700" href="#">
+                        <i class="fas fa-book mr-3">
+                        </i>
+                        Cursos
+                    </a>
+                    <div class="ml-6 space-y-1">
+                        <a class="block py-2.5 px-4 rounded transition duration-200 hover:bg-gray-700" href="#">
+                            Meu curso
+                        </a>
+                        <a class="block py-2.5 px-4 rounded transition duration-200 hover:bg-gray-700" href="#">
+                            Buscar cursos
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <a class="block py-2.5 px-4 rounded transition duration-200 hover:bg-gray-700" href="#">
+                        <i class="fas fa-tasks mr-3">
+                        </i>
+                        Prática
+                    </a>
+                    <div class="ml-6 space-y-1">
+                        <a class="block py-2.5 px-4 rounded transition duration-200 hover:bg-gray-700" href="#">
+                            Questões
+                        </a>
+                        <a class="block py-2.5 px-4 rounded transition duration-200 hover:bg-gray-700" href="#">
+                            Meus simulados
+                        </a>
+                        <a class="block py-2.5 px-4 rounded transition duration-200 hover:bg-gray-700" href="#">
+                            Banco de simulados
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <a class="block py-2.5 px-4 rounded transition duration-200 hover:bg-gray-700" href="#">
+                        <i class="fas fa-chalkboard-teacher mr-3">
+                        </i>
+                        Treinador
+                    </a>
+                    <div class="ml-6 space-y-1">
+                        <a class="block py-2.5 px-4 rounded transition duration-200 hover:bg-gray-700" href="#">
+                            Raio X
+                        </a>
+                        <a class="block py-2.5 px-4 rounded transition duration-200 hover:bg-gray-700" href="#">
+                            Desempenho
+                        </a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <!-- Main content -->
+        <div class="flex-1 p-6 ml-64">
+            <div class="flex justify-between items-center mb-6">
+                <div class="flex items-center space-x-2">
+                    <select class="bg-white border border-gray-300 rounded px-4 py-2">
+                        <option>
+                            PC-MG - 2024 - Investigador
+                        </option>
+                    </select>
+                    <button class="text-gray-500">
+                        <i class="fas fa-exchange-alt">
+                        </i>
+                        Trocar curso
+                    </button>
+                </div>
+                <div class="flex space-x-4">
+                    <button class="bg-white border border-gray-300 rounded px-4 py-2">
+                        Planos
+                    </button>
+                    <button class="bg-white border border-gray-300 rounded px-4 py-2">
+                        Ganhe 30 dias
+                    </button>
+                    <button class="bg-white border border-gray-300 rounded px-4 py-2">
+                        Meu Planejamento
+                    </button>
+                    <button class="bg-white border border-gray-300 rounded px-4 py-2 relative">
+                        Novidades
+                        <span class="bg-red-500 text-white rounded-full px-2 py-1 text-xs absolute top-0 right-0">
+                            1
+                        </span>
+                    </button>
+                    <button class="bg-white border border-gray-300 rounded px-4 py-2">
+                        Portal
+                    </button>
+                    <button class="bg-white border border-gray-300 rounded px-4 py-2">
+                        LMV
+                    </button>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                <div class="lg:col-span-2 space-y-6">
+                    <div class="bg-white p-6 rounded-lg shadow">
+                        <div class="flex justify-between items-center">
+                            <h2 class="text-xl font-bold">
+                                Meus cursos
+                            </h2>
+                            <a class="text-blue-500" href="#">
+                                Ver todos os cursos
+                            </a>
+                        </div>
+                        <div class="flex items-center space-x-4 mt-4">
+                            <img alt="Course logo" class="w-12 h-12 rounded-full" height="50"
+                                src="https://storage.googleapis.com/a1aa/image/4XGMfJ73L0zOLKn52fNUnBMfCbePfNrIfURUWjzwg8hNEke7JA.jpg"
+                                width="50" />
+                            <div>
+                                <h3 class="text-lg font-semibold">
+                                    PC-MG - 2024 - Investigador
+                                </h3>
+                            </div>
+                            <button class="ml-auto bg-teal-500 text-white px-4 py-2 rounded">
+                                Continuar curso
+                            </button>
+                        </div>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow">
+                        <h2 class="text-xl font-bold mb-4">
+                            Explore
+                        </h2>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div class="bg-gray-100 p-4 rounded-lg flex items-center justify-between">
+                                <div>
+                                    <h3 class="text-lg font-semibold">
+                                        Questões de concurso
+                                    </h3>
+                                    <p class="text-gray-500">
+                                        PRÁTICA
+                                    </p>
+                                </div>
+                                <i class="fas fa-check-circle text-gray-500">
+                                </i>
+                            </div>
+                            <div class="bg-gray-100 p-4 rounded-lg flex items-center justify-between">
+                                <div>
+                                    <h3 class="text-lg font-semibold">
+                                        Aulas especializadas
+                                    </h3>
+                                    <p class="text-gray-500">
+                                        TEORIA
+                                    </p>
+                                </div>
+                                <i class="fas fa-play-circle text-gray-500">
+                                </i>
+                            </div>
+                            <div class="bg-gray-100 p-4 rounded-lg flex items-center justify-between">
+                                <div>
+                                    <h3 class="text-lg font-semibold">
+                                        Mentorias
+                                    </h3>
+                                    <p class="text-gray-500">
+                                        SAIBA MAIS
+                                    </p>
+                                </div>
+                                <i class="fas fa-user-friends text-gray-500">
+                                </i>
+                            </div>
+                            <div class="bg-gray-100 p-4 rounded-lg flex items-center justify-between">
+                                <div>
+                                    <h3 class="text-lg font-semibold">
+                                        Planejamento dos seus estudos
+                                    </h3>
+                                    <p class="text-gray-500">
+                                        PLANEJAMENTO
+                                    </p>
+                                </div>
+                                <i class="fas fa-calendar-alt text-gray-500">
+                                </i>
+                            </div>
+                            <div class="bg-gray-100 p-4 rounded-lg flex items-center justify-between">
+                                <div>
+                                    <h3 class="text-lg font-semibold">
+                                        Raio-x da sua banca
+                                    </h3>
+                                    <p class="text-gray-500">
+                                        ANÁLISE
+                                    </p>
+                                </div>
+                                <i class="fas fa-file-alt text-gray-500">
+                                </i>
+                            </div>
+                            <div class="bg-gray-100 p-4 rounded-lg flex items-center justify-between">
+                                <div>
+                                    <h3 class="text-lg font-semibold">
+                                        Análise de concorrência do Treinador
+                                    </h3>
+                                    <p class="text-gray-500">
+                                        ANÁLISE
+                                    </p>
+                                </div>
+                                <i class="fas fa-chart-line text-gray-500">
+                                </i>
+                            </div>
+                            <div class="bg-gray-100 p-4 rounded-lg flex items-center justify-between">
+                                <div>
+                                    <h3 class="text-lg font-semibold">
+                                        Desempenho nas questões
+                                    </h3>
+                                    <p class="text-gray-500">
+                                        ANÁLISE
+                                    </p>
+                                </div>
+                                <i class="fas fa-chart-bar text-gray-500">
+                                </i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="space-y-6">
+                    <div class="bg-white p-6 rounded-lg shadow">
+                        <div class="flex justify-between items-center">
+                            <h2 class="text-xl font-bold">
+                                Olá, Lucas
+                            </h2>
+                            <a class="text-blue-500" href="#">
+                                Ver assinatura
+                            </a>
+                        </div>
+                        <p class="text-gray-500 mt-4">
+                            Gratuito
+                        </p>
+                        <p class="text-gray-500 mt-4">
+                            Você não fez questões nos últimos 7 dias
+                        </p>
+                        <a class="text-blue-500 mt-4 block" href="#">
+                            Ver desempenho
+                        </a>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow">
+                        <h2 class="text-xl font-bold">
+                            RANKING
+                        </h2>
+                        <p class="text-gray-500 mt-4">
+                            Você ainda não atingiu a pontuação mínima para participar do Ranking!
+                        </p>
+                        <a class="text-blue-500 mt-4 block" href="#">
+                            Saiba mais
+                        </a>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow">
+                        <h2 class="text-xl font-bold">
+                            Experimente o app Qconcursos
+                        </h2>
+                        <p class="text-gray-500 mt-4">
+                            Estude onde quiser, mesmo sem internet!
+                        </p>
+                        <div class="flex space-x-4 mt-4">
+                            <img alt="Google Play Store badge" class="w-24 h-10" height="40"
+                                src="https://storage.googleapis.com/a1aa/image/8zNBnbp4R24GPlKuSFhpTkiUzhvfsH03S7B2PzLZSeCRQ63TA.jpg"
+                                width="100" />
+                            <img alt="Apple App Store badge" class="w-24 h-10" height="40"
+                                src="https://storage.googleapis.com/a1aa/image/3XeCtqzaaoSLIyt0mpRTXOQg01sHL32f1UM2k6esH3hdg0vnA.jpg"
+                                width="100" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

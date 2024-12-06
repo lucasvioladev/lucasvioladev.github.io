@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-50">
+    <header class="questions-header">
+        <h1>Questões de Fixação</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Início</a></li>
+            <li>Concursos</li>
+            <li><a href="qc.html">Questões</a></li>
+            <li>Resumos</li>
+            <li>Estatísticas</li>
+        </ul>
+    </nav>
+
+    <div id="quiz-container">
+        <!-- Question card template -->
+        <div class="max-w-4xl mx-auto p-4 bg-white shadow-md mt-6">
+            <div class="flex items-center space-x-4">
+                <div id="question-number" class="bg-gray-200 text-gray-700 font-bold py-1 px-3 rounded">1</div>
+                <div class="flex-1">
+                    <div class="text-gray-700 font-semibold" id="question-id">Q0000000</div>
+                    <div class="text-sm text-gray-500" id="question-category">Category > Subcategory</div>
+                </div>
+            </div>
+            
+            <div class="mt-4 text-sm text-gray-500">
+                <span class="font-semibold">Year:</span> <span id="question-year">2024</span>
+                <span class="ml-4 font-semibold">Board:</span> <span id="question-board">BOARD</span>
+                <span class="ml-4 font-semibold">Organization:</span> <span id="question-org">ORG</span>
+            </div>
+
+            <div id="question-text" class="mt-4 text-gray-700">
+                <!-- Question text will be inserted here -->
+            </div>
+
+            <div id="options" class="mt-4 space-y-2">
+                <!-- Options will be inserted here -->
+            </div>
+
+            <div id="result" class="mt-4 hidden">
+                <div class="p-4 rounded"></div>
+            </div>
+
+            <div class="mt-6">
+                <button id="next" class="bg-orange-500 text-white font-bold py-2 px-6 rounded hidden">
+                    Next Question
+                </button>
+            </div>
+        </div>
+
+        <!-- Bottom stats bar -->
+        <div class="max-w-4xl mx-auto p-4 mt-6 bg-white shadow-md flex justify-between text-gray-500 text-sm">
+            <div class="flex items-center space-x-2">
+                <i class="fas fa-graduation-cap"></i>
+                <span>Explained Answer (0)</span>
+            </div>
+            <div class="flex items-center space-x-2">
+                <i class="fas fa-video"></i>
+                <span>Classes (0)</span>
+            </div>
+            <div class="flex items-center space-x-2">
+                <i class="fas fa-comments"></i>
+                <span>Comments (0)</span>
+            </div>
+            <div class="flex items-center space-x-2">
+                <i class="fas fa-chart-bar"></i>
+                <span>Statistics</span>
+            </div>
+            <div class="flex items-center space-x-2">
+                <i class="fas fa-book"></i>
+                <span>Notes</span>
+            </div>
+            <div class="flex items-center space-x-2">
+                <i class="fas fa-exclamation-triangle"></i>
+                <span>Report Error</span>
+            </div>
+        </div>
+
+        <!-- Score card (hidden initially) -->
+        <div id="score" class="max-w-4xl mx-auto p-4 bg-white shadow-md mt-6 hidden">
+            <h2 class="text-xl font-bold text-gray-700">Final Score</h2>
+            <p class="mt-4 text-gray-600">Correct Answers: <span id="correct-answers" class="font-bold">0</span></p>
+            <button id="restart" class="mt-4 bg-orange-500 text-white font-bold py-2 px-6 rounded">
+                Restart Quiz
+            </button>
+        </div>
+    </div>
+
+    <script>
+        let questions = [];
+        let currentQuestionIndex = 0;
+        let score = 0;
+
+        const optionLetters = ['A', 'B', 'C', 'D', 'E'];
+
+        async function loadQuestions() {
+            try {
+                const response = await fetch('questions.json');
+                const data = await response.json();
+                questions = data.questions;
+                showQuestion();
+            } catch (error) {
+                console.error('Error loading questions:', error);
+            }
+        }
+
+        function showQuestion() {
+            const currentQuestion = questions[currentQuestionIndex];
+            
+            // Update question number and metadata
+            document.getElementById('question-number').textContent = currentQuestionIndex + 1;
+            document.getElementById('question-text').textContent = currentQuestion.question;
+            
+            // Clear and populate options
+            const optionsContainer = document.getElementById('options');
+            optionsContainer.innerHTML = '';
+
+            currentQuestion.options.forEach((option, index) => {
+                const optionDiv = document.createElement('div');
+                optionDiv.className = 'flex items-center';
+                optionDiv.innerHTML = `
+                    <div class="bg-white border border-orange-500 text-orange-500 font-bold py-1 px-3 rounded-full mr-2">
+                        ${optionLetters[index]}
+                    </div>
+                    <div class="text-gray-700">${option}</div>
+                `;
+                optionDiv.addEventListener('click', () => checkAnswer(index));
+                optionsContainer.appendChild(optionDiv);
+            });
+        }
+
+        function checkAnswer(selectedIndex) {
+            const currentQuestion = questions[currentQuestionIndex];
+            const resultElement = document.getElementById('result');
+            const nextButton = document.getElementById('next');
+            const options = document.querySelectorAll('#options > div');
+
+            // Disable further clicks
+            options.forEach(option => {
+                option.style.pointerEvents = 'none';
+            });
+
+            // Show correct/incorrect answer
+            if (selectedIndex === currentQuestion.correctAnswer) {
+                score++;
+                resultElement.querySelector('div').className = 'p-4 rounded bg-green-100 text-green-700';
+                resultElement.querySelector('div').textContent = 'Correct!';
+                
+                // Highlight correct answer
+                options[selectedIndex].querySelector('div:first-child').className = 
+                    'bg-orange-500 text-white font-bold py-1 px-3 rounded-full mr-2';
+            } else {
+                resultElement.querySelector('div').className = 'p-4 rounded bg-red-100 text-red-700';
+                resultElement.querySelector('div').textContent = 'Incorrect!';
+                
+                // Highlight correct and incorrect answers
+                options[currentQuestion.correctAnswer].querySelector('div:first-child').className = 
+                    'bg-green-500 text-white font-bold py-1 px-3 rounded-full mr-2';
+                options[selectedIndex].querySelector('div:first-child').className = 
+                    'bg-red-500 text-white font-bold py-1 px-3 rounded-full mr-2';
+            }
+
+            resultElement.classList.remove('hidden');
+            nextButton.classList.remove('hidden');
+        }
+
+        function nextQuestion() {
+            currentQuestionIndex++;
+            
+            if (currentQuestionIndex < questions.length) {
+                document.getElementById('result').classList.add('hidden');
+                document.getElementById('next').classList.add('hidden');
+                showQuestion();
+            } else {
+                showScore();
+            }
+        }
+
+        function showScore() {
+            document.getElementById('quiz-container').querySelector('.max-w-4xl').classList.add('hidden');
+            document.getElementById('score').classList.remove('hidden');
+            document.getElementById('correct-answers').textContent = score;
+        }
+
+        function restartQuiz() {
+            currentQuestionIndex = 0;
+            score = 0;
+            document.getElementById('quiz-container').querySelector('.max-w-4xl').classList.remove('hidden');
+            document.getElementById('score').classList.add('hidden');
+            document.getElementById('result').classList.add('hidden');
+            document.getElementById('next').classList.add('hidden');
+            showQuestion();
+        }
+
+        // Initialize quiz
+        document.addEventListener('DOMContentLoaded', () => {
+            loadQuestions();
+            document.getElementById('next').addEventListener('click', nextQuestion);
+            document.getElementById('restart').addEventListener('click', restartQuiz);
+        });
+    </script>
+</body>
+</html>
